@@ -1,0 +1,35 @@
+#roll{
+    color:blue;
+    font-size: 20px;
+}
+
+.class{
+    color:brown;
+    font-size: 30px;
+}
+
+.test{
+    color: red;
+    font-size: larger;
+    font-style:italic;
+}
+
+.input{
+    padding: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input,select{
+    margin-left: 30px;
+}
+
+.input2{
+    color:brown;
+}
+
+#country{
+    color:blueviolet;
+}
