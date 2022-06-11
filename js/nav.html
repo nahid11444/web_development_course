@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper .....can be written into the body tag before ending-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="page2.html">conversion rate</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <center><h1><b><u>Currency Converter App</u></b></h1></center>
+      
+    <form class="row g-3" style="border: 2px solid red; margin: 20px; padding: 20px;">  
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="amount" placeholder="Amount">
+      </div>
+
+      <div class="col-3">
+        <select id="from" class="form-select">
+          <option disabled selected>From....</option>
+          <option>Rupee</option>
+          <option>Taka</option>
+          <option>Dollar</option>
+        </select>
+      </div>
+
+      <div class="col-3">
+        <select id="to" class="form-select">
+          <option disabled selected>To....</option>
+          <option>Rupee</option>
+          <option>Taka</option>
+          <option>Dollar</option>
+        </select>
+      </div>
+      
+
+      <div class="col-md-3">
+        <center><button onclick="conversion()" type="button" class="btn btn-success">Convert</button></center>
+        
+      </div>
+
+      
+
+      <div class="col-md-6">
+        <label for="result">Your amount is:</label>
+        <input type="text" id="result">
+      </div>
+      <div>
+        <center>,<h4>Do you want to take your amount from us?</h4></center>
+      </div>
+      <div class="row">
+        <center><button type="button" onclick="" class="btn btn-outline-success">Yes</button>
+          <button type="button" onclick="back()" class="btn btn-outline-danger">No</button>
+        </center>
+      </div>
+      <div class="row" id="transaction">
+        <div class="col-6">
+          <label for="email">Email</label>
+          <input type="email" placeholder="email">
+
+        </div>
+
+      </div>
+    </form>
+
+    <!-- javascript code starts -->
+
+    <script type="text/javascript">  
+      //alert("Currency conversion");
+      function conversion(){
+        var amount = document.getElementById("amount").value;
+        var from = document.getElementById("from").value;
+        var to = document.getElementById("to").value;
+         
+        var result;
+
+        if(from=="Dollar" && to=="Taka"){
+          result = amount*93.03;
+          document.getElementById("result").value=result;
+        }
+        else if(from=="Dollar" && to=="Rupee"){
+          result = amount*78.18;
+          document.getElementById("result").value=result;
+        }
+        else if(from=="Taka" && to=="Dollar"){
+          result = amount*.011;
+          document.getElementById("result").value=result;
+        }
+        else if(from=="Taka" && to=="Rupee"){
+          result = amount*0.84;
+          document.getElementById("result").value=result;
+        }
+        else if(from=="Rupee" && to=="Taka"){
+          result = amount*1.19;
+          document.getElementById("result").value=result;
+        }
+        else{
+          result = amount*0.013;
+          document.getElementById("result").value=result;
+        }
+
+
+        
+
+      }
+
+      function back(){
+        window.location.href ="convert.html";
+      }
+
+    </script>
+ </body>
+ </html>

@@ -45,9 +45,27 @@
           
         </div>
 
+        
+
         <div class="col-md-6">
           <label for="result">Your amount is:</label>
           <input type="text" id="result">
+        </div>
+        <div>
+          <center>,<h4>Do you want to take your amount from us?</h4></center>
+        </div>
+        <div class="row">
+          <center><button type="button" onclick="" class="btn btn-outline-success">Yes</button>
+            <button type="button" class="btn btn-outline-danger">No</button>
+          </center>
+        </div>
+        <div class="row" id="transaction">
+          <div class="col-6">
+            <label for="email">Email</label>
+            <input type="email" placeholder="email">
+
+          </div>
+
         </div>
       </form>
 
@@ -86,8 +104,9 @@
             result = amount*0.013;
             document.getElementById("result").value=result;
           }
-          
+
         }
+
       </script>
 </body>
 </html>
