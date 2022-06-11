@@ -18,12 +18,12 @@
         
       <form class="row g-3" style="border: 2px solid red; margin: 20px; padding: 20px;">  
         <div class="col-md-3">
-          <input type="text" class="form-control" id="inputCity" placeholder="Amount">
+          <input type="text" class="form-control" id="amount" placeholder="Amount">
         </div>
 
         <div class="col-3">
-          <select id="currency" class="form-select">
-            <option selected>From</option>
+          <select id="from" class="form-select">
+            <option disabled selected>From....</option>
             <option>Rupee</option>
             <option>Taka</option>
             <option>Dollar</option>
@@ -31,8 +31,8 @@
         </div>
 
         <div class="col-3">
-          <select id="currency" class="form-select">
-            <option selected>To</option>
+          <select id="to" class="form-select">
+            <option disabled selected>To....</option>
             <option>Rupee</option>
             <option>Taka</option>
             <option>Dollar</option>
@@ -41,7 +41,7 @@
         
 
         <div class="col-md-3">
-          <center><button type="button" class="btn btn-success">Convert</button></center>
+          <center><button onclick="conversion()" type="button" class="btn btn-success">Convert</button></center>
           
         </div>
 
@@ -50,5 +50,17 @@
           <input type="text" id="result">
         </div>
       </form>
+
+      <!-- javascript code starts -->
+
+      <script type="text/javascript">  
+        alert("Currency conversion");
+        function conversion(){
+          var a = document.getElementById("amount").value;
+          var b = document.getElementById("from").value;
+          var c = document.getElementById("to").value;
+          
+        }
+      </script>
 </body>
 </html>
