@@ -20,6 +20,7 @@
 
         //indexed array
         $cars = array("Volvo","BMW");
+        echo "Students have asked for".$cars[1].".".'<br>'."But authority gave them a rotten".$cars[0].".".'<br>';
 
         //associative array
         $students =[
@@ -29,7 +30,7 @@
         ];
 
         foreach($students as $name=>$Roll){
-            echo "Name:".$name.","."Roll".$Roll.'<br />';
+            echo "Name:".$name.","."   "."Roll:".$Roll.'<br />';
         } 
     ?>
 </body>
