@@ -34,7 +34,19 @@
         } 
 
         $email=$_REQUEST['email'];
-        echo "Email:  ".$email;
+        echo "Email:  ".$email.'<br>';
+
+        // php date time
+        date_default_timezone_set('America/Los_Angeles');
+        echo date('Y-M-D h:m:sa').'<br>';
     ?>
+
+    <!-- include     -->
+    <?php include 'footer.html'  ?>
+
+    
+
+
+    
 </body>
 </html>
