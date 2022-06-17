@@ -32,6 +32,9 @@
         foreach($students as $name=>$Roll){
             echo "Name:".$name.","."   "."Roll:".$Roll.'<br />';
         } 
+
+        $email=$_REQUEST['email'];
+        echo "Email:  ".$email;
     ?>
 </body>
 </html>
