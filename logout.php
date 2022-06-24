@@ -1,16 +1,15 @@
 <?php
-    session_start();
+session_start();
 
-    echo 'Before logout';
+echo "Before logout: ";
 
-    echo '<pre>';
-    print_r($_SESSION);
-    echo '</pre>';
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
 
-    session_unset();
+session_unset();
 
-    echo '<pre>';
-    print_r($_SESSION);
-    echo '</pre>';
-
-?>
+echo "After logout: ";
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
